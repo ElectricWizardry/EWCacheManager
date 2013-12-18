@@ -1,4 +1,4 @@
 EWCacheManager
 =============
 
-Singleton class for convenient cache management, using AFNetworking for HTTP requests.
+Singleton class for convenient cache management, using [AFNetworking](https://github.com/AFNetworking/AFNetworking) for HTTP request management.
