@@ -24,6 +24,7 @@
  */
 @interface EWCacheManager : NSObject {
 	NSString *path;
+    NSString *currentDownloadFilename;
 }
 
 @property (nonatomic, weak) id <EWCacheManagerDelegate> delegate;

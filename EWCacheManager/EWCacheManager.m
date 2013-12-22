@@ -44,6 +44,9 @@
 	    operation.outputStream = [NSOutputStream outputStreamToFileAtPath:[[EWCacheManager sharedManager] pathForFilename:filename] append:NO];
         
 	    [operation setDownloadProgressBlock: ^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
+            if (![filename isEqualToString:currentDownloadFilename]) {
+                currentDownloadFilename = filename;
+            }
             _fileProgress = (float)totalBytesRead / totalBytesExpectedToRead;
             _queueProgress = (float)(_fileProgress + self.requestedFilesCount - self.downloadClient.operationQueue.operationCount) / self.requestedFilesCount;
         }];
@@ -126,10 +129,9 @@
 }
 
 - (NSString *)nameOfFileCurrentlyDownloading {
-    if (!_downloadClient) return nil;
+	if (!_downloadClient || !(_downloadClient.operationQueue.operationCount > 0) || currentDownloadFilename.length == 0) return nil;
     
-    return [_downloadClient.operationQueue.operations.lastObject description];
+	return currentDownloadFilename;
 }
-
 
 @end
