@@ -30,6 +30,7 @@
 		075FAE951862546C00248796 /* libEWCacheManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 075FAE7D1862546C00248796 /* libEWCacheManager.a */; };
 		075FAE9B1862546C00248796 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 075FAE991862546C00248796 /* InfoPlist.strings */; };
 		075FAE9D1862546C00248796 /* EWCacheManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FAE9C1862546C00248796 /* EWCacheManagerTests.m */; };
+		07D5AF48188DF5D000C46D88 /* NSFileManager+DirectoryLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D5AF47188DF5D000C46D88 /* NSFileManager+DirectoryLocations.m */; };
 		D3682E884C5640F2AE01FE6D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3630EA26D21847648CD89AFD /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,8 @@
 		075FAE9C1862546C00248796 /* EWCacheManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCacheManagerTests.m; sourceTree = "<group>"; };
 		07B6CC241862552300EB1FA7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		07B6CC261862552700EB1FA7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		07D5AF46188DF5D000C46D88 /* NSFileManager+DirectoryLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+DirectoryLocations.h"; sourceTree = "<group>"; };
+		07D5AF47188DF5D000C46D88 /* NSFileManager+DirectoryLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+DirectoryLocations.m"; sourceTree = "<group>"; };
 		3630EA26D21847648CD89AFD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF7F32F65DCC42E2ABECEDF3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,11 +104,12 @@
 		075FAE741862546C00248796 = {
 			isa = PBXGroup;
 			children = (
+				07D5AF49188DF5D400C46D88 /* Categories */,
 				075FAE821862546C00248796 /* EWCacheManager */,
 				075FAE961862546C00248796 /* EWCacheManagerTests */,
 				075FAE7F1862546C00248796 /* Frameworks */,
-				075FAE7E1862546C00248796 /* Products */,
 				CF7F32F65DCC42E2ABECEDF3 /* Pods.xcconfig */,
+				075FAE7E1862546C00248796 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +169,15 @@
 				075FAE991862546C00248796 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07D5AF49188DF5D400C46D88 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				07D5AF46188DF5D000C46D88 /* NSFileManager+DirectoryLocations.h */,
+				07D5AF47188DF5D000C46D88 /* NSFileManager+DirectoryLocations.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				075FAE881862546C00248796 /* EWCacheManager.m in Sources */,
+				07D5AF48188DF5D000C46D88 /* NSFileManager+DirectoryLocations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
