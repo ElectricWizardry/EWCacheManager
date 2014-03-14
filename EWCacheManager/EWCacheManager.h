@@ -1,7 +1,7 @@
 //
 //  EWCacheManager.h
 //
-//  Created by Eric Bailey on 12/6/13.
+//  Created by Eric Bailey on 2013-12-06.
 //  Copyright (c) 2013 Electric Wizardry, LLC. All rights reserved.
 //
 
@@ -12,29 +12,33 @@
 
 @class EWCacheManager;
 @protocol EWCacheManagerDelegate
-- (void)downloadFailedWithRequest:(NSURLRequest *)request filename:(NSString *)filename error:(NSError *)error;
+- (void)downloadFailedWithRequest:(NSURLRequest *)request
+                         filename:(NSString *)filename
+                            error:(NSError *)error;
 
 @optional
-- (void)downloadSucceededWithRequest:(NSURLRequest *)request filename:(NSString *)filename;
+- (void)downloadSucceededWithRequest:(NSURLRequest *)request
+                            filename:(NSString *)filename;
 @end
 
-/** The `EWCacheManager` class provides a singleton cache manager with convenience methods
- * for downloading (via `AFNetworking`) and interacting with files that are store locally
- * in `Library/Application Support/{BUNDLE_DISPLAY_NAME}`.
+/**
+ *  The `EWCacheManager` class provides a singleton cache manager with
+ *  convenience methods for downloading (via `AFNetworking`) and interacting
+ *  with files stored in the app's application support directory.
  */
 @interface EWCacheManager : NSObject {
-	NSString *path;
-    NSString *currentDownloadFilename;
+  NSString *path;
+  NSString *currentDownloadFilename;
 }
 
-@property (nonatomic, weak) id <EWCacheManagerDelegate> delegate;
+@property(nonatomic, weak) id<EWCacheManagerDelegate> delegate;
 
-@property (nonatomic, strong) AFHTTPClient *downloadClient;
-@property (nonatomic, strong) NSURL *baseURL;
+@property(nonatomic, strong) AFHTTPClient *downloadClient;
+@property(nonatomic, strong) NSURL *baseURL;
 
-@property (readonly) float fileProgress;
-@property (readonly) float queueProgress;
-@property (assign) NSUInteger requestedFilesCount;
+@property(readonly) float fileProgress;
+@property(readonly) float queueProgress;
+@property(assign) NSUInteger requestedFilesCount;
 
 ///---------------------------------------------
 /// @name Getting the Shared Cache Manager
@@ -44,7 +48,6 @@
  *  Returns the singleton cache manager.
  */
 + (id)sharedManager;
-
 
 ///---------------------------------------------
 /// @name Getting Information About Cached Files
@@ -67,7 +70,7 @@
 - (BOOL)hasFileInCache:(NSString *)filename;
 
 /**
- *  Returns the size in bytes of a file in the cache, or 0 if the file is not found.
+ *  Returns the size in bytes of the cached file, or 0 if the file is not found.
  *
  *  @param filename The name of a cached file.
  */
@@ -87,7 +90,10 @@
  *  @param filename filename description
  *  @param success  success description
  */
-- (void)downloadFileWithRequest:(NSURLRequest *)request filename:(NSString *)filename success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success;
+- (void)downloadFileWithRequest:(NSURLRequest *)request
+                       filename:(NSString *)filename
+                        success:(void (^)(AFHTTPRequestOperation *operation,
+                                          id responseObject))success;
 
 /**
  *  Description
