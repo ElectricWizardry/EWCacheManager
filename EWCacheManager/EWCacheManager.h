@@ -1,9 +1,9 @@
 /*
 
     File: EWCacheManager.h
- Version: 1.1
+ Version: 1.2
  Created: 2013-12-06
- Updated: 2014-03-14
+ Updated: 2014-04-24
   Author: Eric Bailey <eric@ericb.me>
           Electric Wizardry, LLC <http://electric-wizardry.com>
 
@@ -32,8 +32,8 @@
 
 #import <Foundation/Foundation.h>
 
-@class AFHTTPClient;
 @class AFHTTPRequestOperation;
+@class AFHTTPRequestOperationManager;
 
 @class EWCacheManager;
 @protocol EWCacheManagerDelegate
@@ -58,7 +58,7 @@
 
 @property(nonatomic, weak) id<EWCacheManagerDelegate> delegate;
 
-@property(nonatomic, strong) AFHTTPClient *downloadClient;
+@property(nonatomic, strong) AFHTTPRequestOperationManager *downloadClient;
 @property(nonatomic, strong) NSURL *baseURL;
 
 @property(readonly) float fileProgress;
@@ -109,21 +109,27 @@
 - (void)deleteFileInCache:(NSString *)filename;
 
 /**
- *  Description
+ *  Initiates a download request with the specified request and filename,
+ *  executing success() and failure() as appropriate, if defined.
  *
- *  @param request  request description
- *  @param filename filename description
- *  @param success  success description
+ *  @param request  The URL request to make.
+ *  @param filename The filename where the data should be downloaded.
+ *  @param success  The block to execute upon sucessfully downloading the
+ *                  requested file.
+ *  @param failure  The block to execute upon failure (lost connection, data
+ *                  corruption, IO error, etc).
  */
 - (void)downloadFileWithRequest:(NSURLRequest *)request
                        filename:(NSString *)filename
                         success:(void (^)(AFHTTPRequestOperation *operation,
-                                          id responseObject))success;
+                                          id responseObject))success
+                        failure:(void (^)(AFHTTPRequestOperation *operation,
+                                          NSError *error))failure;
 
 /**
- *  Description
+ *  Returns the name of the file currently being downloaded.
  *
- *  @return return value description
+ *  @return The filename.
  */
 - (NSString *)nameOfFileCurrentlyDownloading;
 

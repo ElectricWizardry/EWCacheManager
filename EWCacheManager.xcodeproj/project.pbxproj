@@ -26,7 +26,6 @@
 		075FAE881862546C00248796 /* EWCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FAE871862546C00248796 /* EWCacheManager.m */; };
 		075FAE8F1862546C00248796 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075FAE8E1862546C00248796 /* XCTest.framework */; };
 		075FAE901862546C00248796 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075FAE801862546C00248796 /* Foundation.framework */; };
-		075FAE921862546C00248796 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075FAE911862546C00248796 /* UIKit.framework */; };
 		075FAE951862546C00248796 /* libEWCacheManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 075FAE7D1862546C00248796 /* libEWCacheManager.a */; };
 		075FAE9B1862546C00248796 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 075FAE991862546C00248796 /* InfoPlist.strings */; };
 		075FAE9D1862546C00248796 /* EWCacheManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FAE9C1862546C00248796 /* EWCacheManagerTests.m */; };
@@ -65,7 +64,6 @@
 		075FAE871862546C00248796 /* EWCacheManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCacheManager.m; sourceTree = "<group>"; };
 		075FAE8D1862546C00248796 /* EWCacheManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EWCacheManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		075FAE8E1862546C00248796 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		075FAE911862546C00248796 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		075FAE981862546C00248796 /* EWCacheManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EWCacheManagerTests-Info.plist"; sourceTree = "<group>"; };
 		075FAE9A1862546C00248796 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		075FAE9C1862546C00248796 /* EWCacheManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCacheManagerTests.m; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 			files = (
 				075FAE951862546C00248796 /* libEWCacheManager.a in Frameworks */,
 				075FAE8F1862546C00248796 /* XCTest.framework in Frameworks */,
-				075FAE921862546C00248796 /* UIKit.framework in Frameworks */,
 				075FAE901862546C00248796 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,7 +126,6 @@
 				07B6CC241862552300EB1FA7 /* SystemConfiguration.framework */,
 				075FAE801862546C00248796 /* Foundation.framework */,
 				075FAE8E1862546C00248796 /* XCTest.framework */,
-				075FAE911862546C00248796 /* UIKit.framework */,
 				3630EA26D21847648CD89AFD /* libPods.a */,
 			);
 			name = Frameworks;

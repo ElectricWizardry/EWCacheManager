@@ -1,10 +1,15 @@
 EWCacheManager
 =============
 
-EWCacheManager is a singleton class for convenient cache management, using [AFNetworking](https://github.com/AFNetworking/AFNetworking) for HTTP request management. I ([@yurrriq](https://github.com/yurrriq)) mostly created this for my own use, and to get famililar with the process of writing documentation for Objective-C classes.
+EWCacheManager is a singleton class for convenient cache management, using [AFNetworking](https://github.com/AFNetworking/AFNetworking) for HTTP request management. I ([@yurrriq](https://github.com/yurrriq)) mostly created this for my own use, and to get famililar with the process of [writing documentation for Objective-C classes](http://nshipster.com/documentation/).
 
 # Documentation
 [EWCacheManager Class Reference](http://electric-wizardry.com/Classes/EWCacheManager.html)
+
+# Dependencies
+<big><pre>
+[pod](https://github.com/CocoaPods/CocoaPods) '[AFNetworking](https://github.com/AFNetworking/AFNetworking)', '~> [2.2.3](https://github.com/AFNetworking/AFNetworking/releases/tag/2.2.3)'
+</pre></big>
 
 # Thanks
 - [@AFNetworking](https://github.com/AFNetworking) for [AFNetworking](https://github.com/AFNetworking/AFNetworking), a delightful networking library
@@ -13,9 +18,9 @@ EWCacheManager is a singleton class for convenient cache management, using [AFNe
 - [@onevcat](https://github.com/onevcat) for [VVDocumenter-Xcode](https://github.com/onevcat/VVDocumenter-Xcode), an Xcode plugin that generates Javadoc style documetation templates by typing `///`
 
 # License
-[EWCacheManager](https://github.com/electricwizardry/cache-manager/) is licensed under The MIT License (MIT).
+[EWCacheManager](https://github.com/electricwizardry/cache-manager/) is licensed under [The MIT License (MIT)](http://opensource.org/licenses/MIT).
 
-Copyright (c) 2014 Electric Wizardry, LLC
+Copyright (c) 2014 [Electric Wizardry, LLC](https://github.com/ElectricWizardry/)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
