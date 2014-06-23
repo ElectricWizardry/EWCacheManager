@@ -8,7 +8,7 @@ EWCacheManager is a singleton class for convenient cache management, using [AFNe
 
 # Dependencies
 <big><pre>
-[pod](https://github.com/CocoaPods/CocoaPods) '[AFNetworking](https://github.com/AFNetworking/AFNetworking)', '~> [2.2.3](https://github.com/AFNetworking/AFNetworking/releases/tag/2.2.3)'
+[pod](https://github.com/CocoaPods/CocoaPods) '[AFNetworking](https://github.com/AFNetworking/AFNetworking)', '~> [2.2.4](https://github.com/AFNetworking/AFNetworking/releases/tag/2.2.4)'
 </pre></big>
 
 # Thanks
@@ -18,7 +18,7 @@ EWCacheManager is a singleton class for convenient cache management, using [AFNe
 - [@onevcat](https://github.com/onevcat) for [VVDocumenter-Xcode](https://github.com/onevcat/VVDocumenter-Xcode), an Xcode plugin that generates Javadoc style documetation templates by typing `///`
 
 # License
-[EWCacheManager](https://github.com/electricwizardry/cache-manager/) is licensed under [The MIT License (MIT)](http://opensource.org/licenses/MIT).
+[EWCacheManager](https://github.com/electricwizardry/cache-manager/) is licensed under [The MIT License (MIT)](http://ew.mit-license.org).
 
 Copyright (c) 2014 [Electric Wizardry, LLC](https://github.com/ElectricWizardry/)
 

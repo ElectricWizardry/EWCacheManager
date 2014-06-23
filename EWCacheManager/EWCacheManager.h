@@ -1,9 +1,9 @@
 /*
 
     File: EWCacheManager.h
- Version: 1.2
+ Version: 1.3
  Created: 2013-12-06
- Updated: 2014-04-24
+ Updated: 2014-06-23
   Author: Eric Bailey <eric@ericb.me>
           Electric Wizardry, LLC <http://electric-wizardry.com>
 
