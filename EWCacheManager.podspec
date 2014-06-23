@@ -20,12 +20,7 @@ Pod::Spec.new do |s|
   s.summary      = "Singleton class for convenient cache management, using AFNetworking for HTTP requests."
 
   s.description  = <<-DESC
-                   A longer description of EWCacheManager in Markdown format.
-
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
+                   EWCacheManager is a singleton class for convenient cache management, using [AFNetworking](https://github.com/AFNetworking/AFNetworking) for HTTP request management. I ([@yurrriq](https://github.com/yurrriq)) mostly created this for my own use, and to get famililar with the process of [writing documentation for Objective-C classes](http://nshipster.com/documentation/).
                    DESC
 
   s.homepage     = "http://electric-wizardry.com/Classes/EWCacheManager.html"
@@ -90,7 +85,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "EWCacheManager", "Categories"
-  # s.exclude_files = "Classes/Exclude"
+  s.exclude_files = "EWCacheManagerTests"
 
   # s.public_header_files = "Classes/**/*.h"
 
